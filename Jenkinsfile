@@ -7,7 +7,6 @@ pipeline {
                 sh 'echo Integrating Jenkins Pipeline with GitHub Webhook using Jenkinsfile'
             }
         }
-
         stage('test') {
             steps {
                 echo 'Turan Gozukara'
