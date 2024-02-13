@@ -3,25 +3,15 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo 'Turan Gozukara'
-                sh 'echo Integrating Jenkins Pipeline with GitHub Webhook using Jenkinsfile'
-            }
-        }
-        stage('test') {
-            steps {
-                echo 'Turan Gozukara'
-                sh 'whoami'
-                sh 'pwd'
-                sh 'ls'
+                echo 'Compiling the java source code'
+                sh 'javac Hello.java'
             }
         }
         stage('run') {
             steps {
-                echo 'Turan Gozukara'
-                sh 'python3 --version'
-                sh 'python3 pipeline.py'
+                echo 'Running the compiled java code.'
+                sh 'java Hello'
             }
         }
     }
-
 }
